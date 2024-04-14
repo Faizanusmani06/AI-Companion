@@ -13,6 +13,7 @@ export async function POST(
 ) {
   try {
     const { prompt } = await request.json();
+    console.log(prompt)
     const user = await currentUser();
     if (!user || !user.firstName || !user.id)
       return new NextResponse("Unauthorized", { status: 401 });
