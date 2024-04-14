@@ -66,22 +66,26 @@ import { useState } from "react";
 //   );
 // };
 const ChatClient = () => {
-  const [question, setQuestion] = useState<string>("")
-  const [solution, setSolution] = useState<string>("")
+  const [question, setQuestion] = useState<string>("");
+  const [solution, setSolution] = useState<string>("");
   const handleSubmit = () => {
-    setSolution("We're making strides! Our goal is to make life multi-planetary. Mars is the next logical step. The challenges are immense, but the potential is even greater.")
-  }
+    setSolution(
+      "Great question! I developed my laws to describe the relationship between an object's motion and the forces acting on it."
+    );
+  };
   return (
     <div>
-      
-    
-      <input type="text" className="m-5 rounded-md p-5 w-full"/>
-      <button type="submit" onClick={handleSubmit} className="ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Send</button>
-    <div className="font-semibold text-3xl ml-5">
-    {solution}
+      <h1 className="text-center text-5xl font-bold mt-5">Sir Isaac Newton</h1>
+      <input type="text" className="m-5 rounded-md p-5 w-full" />
+      <button
+        type="submit"
+        onClick={handleSubmit}
+        className="w-full ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Send
+      </button>
+      <div className="font-semibold text-3xl ml-5">{solution}</div>
     </div>
-    
-    </div>
-  )
-}
+  );
+};
 export default ChatClient;
